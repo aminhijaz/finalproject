@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+<head>
+{% block title %}Users database{% endblock %}
+{% block body %}
+<table>
+{% for user in users %}
+<tr>
+<td>{{user.username}}</td>
+<td>{{user.email}}</td>
+<td>{{user.password}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+</head>
