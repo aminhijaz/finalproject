@@ -4,7 +4,7 @@ import dataset
 import os
 db = dataset.connect("postgres://axhifbkpwevbyr:fde9124d2d41e4d1b127cd0795358912284f8b2d3d17548297914157fdc703bb@ec2-54-204-32-145.compute-1.amazonaws.com:5432/dd4f0ebt1ijhbf")
 app=Flask(__name__)
-app.secret_key= os.urandom(24)
+app.secret_key= "s90183192083810298apsoduaspdiohashk"
 @app.route("/")
 def home():
 	return render_template("home.html")
