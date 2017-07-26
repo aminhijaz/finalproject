@@ -1,12 +1,39 @@
 {% extends "index.html" %}
-<head>
-{% block title %}register{% endblock %}
-</head>
-{% block body %}
-<form action="/register" method="post">
-<input type="text" name="firstname" value="First Name"></input>
-<input type="email" name="email" value="Email">
-<input type="password" name="password" value="Password">
-<input type="submit" value="submit"> 
-</form>
+{% block title %}{% endblock %}
+{% block css %}<link href="../static/css/register.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 {% endblock %}
+
+{% block body %}
+{% if register %}
+  <div class="w3-container w3-green">
+    <p> register succseed <a href="/login">click here to login</a> </p>
+  </div>
+
+{% endif %}
+<div id="login-box">
+	<div class="left">
+		<form action="/register" method="post">
+    		<h1>Sign up</h1>
+		    <input type="text" name="firstname" placeholder="Firstname" />
+		    <input type="text" name="lastname" placeholder="Lastname" />
+		    <input type="text" name="username" placeholder="Username" />
+		    <input type="text" name="email" placeholder="E-mail" />
+		    <input type="text" name="hometown" placeholder="Hometown" />
+		    <input type="text" name="website" placeholder="Personal Website Link" />
+		    <input type="password" name="password" placeholder="Password" />
+  			<input type="radio" id="radio1" name="radios" value="male" >
+    		<label for="radio1">Male</label>
+ 			<input type="radio" id="radio2" name="radios" value="female">
+ 			<label for="radio2">Female</label>
+		    <input type="submit" name="signup_submit" value="Sign me up" />
+		 </div></form>
+
+		  <div class="right">
+		  </div>
+{% endblock %}
+
+
+
+
+

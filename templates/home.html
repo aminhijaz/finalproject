@@ -1,0 +1,113 @@
+{% extends "index.html" %}
+{% block title %}Home{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="../static/css/home.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock %}
+
+{% block body %}
+<div class="Slides">
+  <img class="mySlides" src="../static/images/2.jpg">
+  <img class="mySlides" src="../static/images/9.jpg">
+  <img class="mySlides" src="../static/images/10.jpg">
+</div>
+
+<script type="text/javascript">
+var myIndex = 0;
+	carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<br><br><br>
+  <div class="Cards">
+    <header class="w3-container newcolor">
+      <h1>Fares Khafajah</h1>
+    </header>
+
+    <div class="w3-container">
+      <p>Hello, My name is Fares Khafajah, I'm 16 years old I study in the Greece Catholic School and i'm a member in Code for Palestine, it all started when i applied to WeCode's application online, and from that moment to now i've learnt a lot of things that i never thought i can learn in the past.</p>
+    </div>
+
+    <footer class="w3-container newcolor">
+      <h5>Ramallah</h5>
+    </footer>
+  </div>
+
+  <div class="Cards1">
+    <header class="w3-container newcolor">
+      <h1>Amin Hijaz</h1>
+    </header>
+
+    <div class="w3-container">
+      <p>I am Amin Hijaz , 16 years old , I am in year 2 in code for palestine programme. I think it's a helpful programme. It teaches you programming in a really good way and it can be a start for anyone who wants to be a programmer in the future.</p>
+    </div>
+
+    <footer class="w3-container newcolor">
+      <h5>Berzuit</h5>
+    </footer>
+  </div>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Code For Palestine</h2>
+<p>Code for Palestine was born in 2015 out of a desire to teach coding and entrepreneurial skills to some of the brightest high school students throughout the West Bank and Gaza Strip. The organization funding the initiative, the PalTel Group Foundation [PGF], recognized that there weren't enough students graduating from Palestinian universities in STEM fields, and those that were graduating lacked some of the critical skills needed to succeed in the private sector. Most importantly, PGF saw an opportunity for a tech-driven startup scene to help tackle some of Palestine's problems, and realized that a culture of entrepreneurship needed to be bred in order for a startup culture to blossom. 
+
+Code for Palestine is a three year-long program, beginning the summer before 10th grade and concluding after 12th grade. Each year has many in-person sessions but is kicked off by a two-week camp held during the summer. Volunteer undergraduate instructors from Stanford University have served as the primary teachers during the two-week summer camp. </p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card-2 w3-white">
+  <img src="../static/images/5.jpg" alt="Vernazza" style="width:100%">
+  <div class="w3-container">
+  <h3>Year 1</h3>
+  <h4>Python</h4>
+  <p>In this year you start with programming basics with easy libraries such as turtle and pygame that will help you a lot understanding the basics of programming. </p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card-2 w3-white">
+  <img src="../static/images/6.jpg" alt="Cinque Terre" style="width:100%">
+  <div class="w3-container">
+  <h3>Year 2</h3>
+  <h4>HTMl CSS Flask Java script</h4>
+  <p>In this year you start web devlopment with flask framework , a new easy framework with really great features , Code For Palestine also focus on your Front-End skills to be a good completed programmer in both sides: Back end and front end </p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card-2 w3-white">
+  <img src="../static/images/7.jpg" alt="Monterosso" style="width:100%">
+  <div class="w3-container">
+  <h3>Year 3</h3>
+  <h4>Phone Applications</h4>
+  <p>In this year you have to build a brand new phone application with a new unique idea , going through this process will help you to gain a lot of skills and it will help you to understand new programming languages that will help you in your way in mobile applections devloping and that's really important because phones are easier and more popular in using</p>
+  </div>
+  </div>
+</div>
+
+</div>
+
+
+{% endblock %}

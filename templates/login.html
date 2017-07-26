@@ -1,12 +1,35 @@
 {% extends "index.html" %}
-<head>
-{% block title %}login{% endblock %}
-</head>
-{% block body %}
-<form action="/login" method="post">
-<input type="text" name="username" value="username"></input>
-<input type="email" name="email" value="Email">
-<input type="password" name="password" value="Password">
-<input type="submit" value="submit"> 
-</form>
+{% block title %}Login{% endblock %}
+{% block css %}
+
+<link rel="stylesheet" type="text/css" href="../static/css/login.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 {% endblock %}
+{% block body %}
+{% if failed %}
+	<div class="w3-container w3-red">
+    <p>Wrong email or password , try again or <a href="/register">click here to register</a></p>
+  </div>
+{% endif %}
+	{% if message %}
+	<div class="w3-container w3-red">
+    <p>Please login first,if you are not registered <a href="/register">click here to register</a></p>
+  </div>
+{% endif %}
+<div id="login-box">
+	<div class="left">
+		<form action="/login" method="post">
+    		<h1>Sign in</h1>
+    		<br><br><br>
+		    <input type="text" name="username" placeholder="Username" />
+		    <br><br><br><br><br>
+		    <input type="password" name="password" placeholder="Password" />
+		    <br><br><br>  
+		    <input type="submit" name="signup_submit" value="Sign me in" />
+		    <input type="submit" name="signup_submit" value="Sign up" />
+
+		  </div>
+		  <div class="right">
+		  </div>
+{% endblock %}
+

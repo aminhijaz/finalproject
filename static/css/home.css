@@ -1,0 +1,30 @@
+.mySlides {
+  height:100%;
+  width:100%;
+}
+
+.Slides {
+	height: 60%;
+	width: 100%;
+
+}
+body {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.Cards {
+	width:40%;
+	margin-left: 5%;
+	float: left;
+}
+
+.newcolor {
+  background-color:#47c9af
+}
+
+.Cards1 {
+	width:40%;
+	margin-right: 5%;
+	float: right;
+}

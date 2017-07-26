@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+{% block title %}Users List{% endblock %}
+
+<style type="text/css">
+body {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  max-width: 30%;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+
+{% block body %}
+{% for user in users %}
+{% if user.gender == "male" %}
+<div class="card" style="max-width:30%; display: inline-block;">
+  <img width="100%" src="../static/images/male.png" alt="Avatar">
+  <div class="container">
+    <h4><b>{{user.firstname}} {{user.lastname}}     {{user.hometown}}</b></h4>
+    <a href="{{user.website}}">Personal Website</a>
+  </div>
+</div>
+{% else %}
+<div class="card" style="max-width:30%; display: inline-block;">
+  <img width="100%" src="../static/images/female.png" alt="Avatar">
+  <div class="container">
+    <h4><b>{{user.username}} {{user.lastname}}       {{user.hometown}}</b></h4> 
+    <a href="{{user.website}}">Personal Website</a>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endblock %}

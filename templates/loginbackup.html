@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+<head>
+{% block title %}login{% endblock %}
+</head>
+{% block body %}
+<form action="/login" method="post">
+<input type="text" name="username" value="username"></input>
+<input type="password" name="password" value="Password">
+<input type="submit" value="submit"> 
+</form>
+{% endblock %}

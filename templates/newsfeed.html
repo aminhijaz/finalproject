@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+<!DOCTYPE html>
+<html>
+  <title>{% block title %}{% endblock %}</title>
+<head>
+{% block css %}<link href="../static/css/newsfeed.css" rel="stylesheet" type="text/css" media="all" />{% endblock %}
+</head>
+{% block body %}
+<center><h1>NewsFeed</h1></center>
+<form action="/newsfeed" method="POST">
+<center><textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea></center>
+<input type="submit" value="POST">
+</form>
+<br><br>
+
+<ul class="timeline">
+{% for post in posts %}
+  <li>
+  <div class="avatar">
+  <img src="../static/images/codeforpalestine.jpg" width=100px height=100px>
+  <div class="hover">
+  <div class="icon-twitter"></div>
+ <h5>{{post.username}}</h5><br/>
+
+  </div>
+  </div>
+  <div class="bubble-container">
+  <div class="bubble">
+  <div class="retweet">
+  <div class="icon-retweet"></div>
+  {{post.status}}
+
+</div></div>
+<h6>{{post.time}}</h6>
+
+</li>
+<hr>
+ {% endfor %}
+  
+{% endblock %}
